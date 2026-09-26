@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTGhub | Tech, Transport & Gaming</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="logo.png">
+    
+    <style>
+        :root {
+            --bg-color: #f5f5f7;
+            --card-bg: #ffffff;
+            --text-main: #1d1d1f;
+            --text-secondary: #86868b;
+            --accent: #0066cc;
+            --border-color: #d2d2d7;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            position: sticky;
+            top: 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            text-decoration: none;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            margin-left: 1.5rem;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem 2rem 1rem;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            color: var(--text-secondary);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Search Bar Styling */
+        .search-container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 0.85rem 1.2rem;
+            font-size: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            background: var(--card-bg);
+            color: var(--text-main);
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        .search-container input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.15);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            padding: 2rem;
+            text-decoration: none;
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            border-color: var(--accent);
+        }
+
+        .meta {
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .article-card h3 {
+            font-size: 1.4rem;
+            margin-top: 0;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.5px;
+        }
+
+        .article-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="homepage.html" class="logo">TTG<span>hub</span></a>
+        <nav>
+            <a href="homepage.html">Home</a>
+            <a href="#">Tech</a>
+            <a href="#">Transport</a>
+            <a href="#">Gaming</a>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>Welcome to TTGhub!</h1>
+        <p>Your home for all things tech, transport, and gaming. We also discuss leaks, tips and tricks! (please note that this website is still in its early stages of development so expect bugs and lack of articles)</p>
+    </div>
+
+    <!-- Instant Search Bar -->
+    <div class="search-container">
+        <input type="text" id="siteSearch" placeholder="Search articles (e.g., iPad, Train, Cars)..." onkeyup="searchArticles()">
+    </div>
+
+    <div class="container">
+        <div class="articles-grid">
+            
+            <!-- iPad Article Card -->
+            <a href="ipadmini8.html" class="article-card">
+                <span class="meta">Tech • Apple</span>
+                <h3>The OLED iPad Mini</h3>
+                <p>Why the rumored display upgrade changes everything for portable gaming and media.</p>
+            </a>
+
+            <!-- Train Sim World Article Card -->
+            <a href="tswtimetable.html" class="article-card">
+                <span class="meta">Gaming • Simulation</span>
+                <h3>Mastering Train Sim World</h3>
+                <p>A breakdown of timetable layers, signaling, and running British rail routes smoothly.</p>
+            </a>
+
+            <!-- Cars Article Card -->
+            <a href="carsarticle.html" class="article-card">
+                <span class="meta">Transport • Automotive</span>
+                <h3>The Evolution of Modern Car Design</h3>
+                <p>Exploring how aerodynamics, minimalism, and futuristic styling are changing modern vehicles.</p>
+            </a>
+            
+<a href="smartwatchcomparison.html" class="article-card">
+    <span class="meta">Tech • Wearables</span>
+    <h3>Apple Watch vs. Galaxy Watch vs. Pixel Watch</h3>
+    <p>A comprehensive ecosystem breakdown comparing the big three smartwatches to help you choose the right companion for your phone.</p>
+</a>
+
+<a href="iphone18vsduo.html" class="article-card">
+    <span class="meta">Tech • Apple</span>
+    <h3>iPhone Duo & iPhone 18 Pro Max</h3>
+    <p>An in-depth overview of Apple's 2026 powerhouses, featuring their first foldable device and the ultimate flagship pro max.</p>
+</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 TTGhub. Soon to become top few of the most trusted tech, transport and gaming websites :D 
+    </footer>
+
+    <!-- Search Script -->
+    <script>
+    function searchArticles() {
+        let input = document.getElementById('siteSearch').value.toLowerCase();
+        let cards = document.getElementsByClassName('article-card');
+        
+        for (let i = 0; i < cards.length; i++) {
+            let textContent = cards[i].innerText.toLowerCase();
+            
+            if (textContent.includes(input)) {
+                cards[i].style.display = ""; 
+            } else {
+                cards[i].style.display = "none"; 
+            }
+        }
+    }
+    </script>
+
+</body>
+</html>
